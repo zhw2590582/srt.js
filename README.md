@@ -27,7 +27,7 @@ OR umd builds are also available
 
 #### js
 ```js
-import SrtJs from 'srt.js';
+import SrtJs from '@zhw2590582/srt.js';
 
 new SrtJs({
   videoElement: '.video',
@@ -52,7 +52,7 @@ new SrtJs({
 ## Global polyfill
 
 ```js
-import SrtJs from 'srt.js';
+import SrtJs from '@zhw2590582/srt.js';
 
 SrtJs.polyfill()
 ```
