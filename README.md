@@ -20,9 +20,8 @@ OR umd builds are also available
 ## Usage
 
 #### html
-
 ```html
-<video class="video" src="path/to/file.mp4"></video>
+<video class="video" src="./video/elephants-dream-medium.mp4"></video>
 ```
 
 #### js
@@ -51,6 +50,16 @@ new SrtJs({
 
 ## Global polyfill
 
+#### html
+``` html
+<video class="video" preload="metadata" controls>
+  <source src="./video/elephants-dream-medium.mp4" type="video/mp4" />
+  <track src="./subtitle/english-subtitles.srt" label="English srt subtitles" kind="subtitles" srclang="en" default />
+  <track src="./subtitle/english-subtitles.vtt" label="English vtt subtitles" kind="subtitles" srclang="en" />
+</video>
+```
+
+#### js
 ```js
 import SrtJs from '@zhw2590582/srt.js';
 
