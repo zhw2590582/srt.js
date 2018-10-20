@@ -1,0 +1,39 @@
+{
+  "name": "srt.js",
+  "version": "1.0.0",
+  "description": "Let the video player support .srt format subtitles",
+  "main": "dist/srt.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development rollup -c -m -w",
+    "build": "cross-env NODE_ENV=production rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhw2590582/srt.js.git"
+  },
+  "keywords": [
+    "video",
+    "srt"
+  ],
+  "author": "Harvey Zack <laozhaochaguan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhw2590582/srt.js/issues"
+  },
+  "homepage": "https://github.com/zhw2590582/srt.js#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-external-helpers": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/runtime": "^7.1.2",
+    "cross-env": "^5.2.0",
+    "rollup": "^0.66.6",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-eslint": "^5.0.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-uglify": "^6.0.0"
+  }
+}
