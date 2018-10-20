@@ -88,11 +88,7 @@ class SrtJs {
       .replace(/\{\/([ibu])\}/g, '</$1>')
       .replace(/(\d\d:\d\d:\d\d),(\d\d\d)/g, '$1.$2')
       .concat('\r\n\r\n'));
-    return this.toBlob(vttText);
-  }
-
-  toBlob(text) {
-    return URL.createObjectURL(new Blob([text], {
+    return URL.createObjectURL(new Blob([vttText], {
       type: 'text/vtt'
     }));
   }
