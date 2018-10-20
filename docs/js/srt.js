@@ -75,15 +75,30 @@
         var _this3 = this;
 
         var $track = document.createElement('track');
-        $track.label = subtitle.label || '';
-        $track.kind = subtitle.kind || '';
-        $track.srclang = subtitle.srclang || '';
-        $track.default = subtitle.default || false;
-        this.fetchUrl(subtitle.src).then(function (data) {
-          $track.src = data;
 
-          _this3.$video.appendChild($track);
-        });
+        if (subtitle.label) {
+          $track.label = subtitle.label;
+        }
+
+        if (subtitle.kind) {
+          $track.kind = subtitle.kind;
+        }
+
+        if (subtitle.srclang) {
+          $track.srclang = subtitle.srclang;
+        }
+
+        if (subtitle.default) {
+          $track.default = subtitle.default;
+        }
+
+        if (subtitle.src) {
+          this.fetchUrl(subtitle.src).then(function (data) {
+            $track.src = data;
+
+            _this3.$video.appendChild($track);
+          });
+        }
       }
     }, {
       key: "fetchUrl",
@@ -108,12 +123,7 @@
       key: "srtToVtt",
       value: function srtToVtt(text) {
         var vttText = 'WEBVTT \r\n\r\n'.concat(text.replace(/\{\\([ibu])\}/g, '</$1>').replace(/\{\\([ibu])1\}/g, '<$1>').replace(/\{([ibu])\}/g, '<$1>').replace(/\{\/([ibu])\}/g, '</$1>').replace(/(\d\d:\d\d:\d\d),(\d\d\d)/g, '$1.$2').concat('\r\n\r\n'));
-        return this.toBlob(vttText);
-      }
-    }, {
-      key: "toBlob",
-      value: function toBlob(text) {
-        return URL.createObjectURL(new Blob([text], {
+        return URL.createObjectURL(new Blob([vttText], {
           type: 'text/vtt'
         }));
       }

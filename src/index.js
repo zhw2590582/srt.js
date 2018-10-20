@@ -52,14 +52,29 @@ class SrtJs {
 
   creatTrack(subtitle) {
     const $track = document.createElement('track');
-    $track.label = subtitle.label || '';
-    $track.kind = subtitle.kind || '';
-    $track.srclang = subtitle.srclang || '';
-    $track.default = subtitle.default || false;
-    this.fetchUrl(subtitle.src).then(data => {
-      $track.src = data;
-      this.$video.appendChild($track);
-    });
+
+    if (subtitle.label) {
+      $track.label = subtitle.label;
+    }
+
+    if (subtitle.kind) {
+      $track.kind = subtitle.kind;
+    }
+
+    if (subtitle.srclang) {
+      $track.srclang = subtitle.srclang;
+    }
+
+    if (subtitle.default) {
+      $track.default = subtitle.default;
+    }
+
+    if (subtitle.src) {
+      this.fetchUrl(subtitle.src).then(data => {
+        $track.src = data;
+        this.$video.appendChild($track);
+      });
+    }
   }
 
   fetchUrl(url) {
