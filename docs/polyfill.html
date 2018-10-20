@@ -16,28 +16,13 @@
     <div class="download"></div>
     <video class="video" preload="metadata" controls>
       <source src="./video/elephants-dream-medium.mp4" type="video/mp4" />
+      <track src="./subtitle/english-subtitles.srt" label="English srt subtitles" kind="subtitles" srclang="en" default />
+      <track src="./subtitle/english-subtitles.vtt" label="English vtt subtitles" kind="subtitles" srclang="en" />
     </video>
   </div>
   <script src="./js/srt.js"></script>
   <script>
-    new SrtJs({
-      videoElement: ".video",
-      subtitles: [
-        {
-          default: true,
-          src: "./subtitle/english-subtitles.srt",
-          label: "English srt subtitles",
-          kind: "subtitles",
-          srclang: "en",
-        },
-        {
-          src: "./subtitle/english-subtitles.vtt",
-          label: "English vtt subtitles",
-          kind: "subtitles",
-          srclang: "en"
-        }
-      ]
-    });
+    SrtJs.polyfill();
   </script>
 </body>
 
