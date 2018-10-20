@@ -1,7 +1,7 @@
 {
   "name": "srt.js",
   "version": "1.0.0",
-  "description": "Let the video player support .srt format subtitles",
+  "description": "Let the html5 video player support .srt format subtitles.",
   "main": "dist/srt.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development rollup -c -m -w",
