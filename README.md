@@ -21,7 +21,9 @@ OR umd builds are also available
 
 #### html
 ```html
-<video class="video" src="./video/elephants-dream-medium.mp4"></video>
+<video class="video" preload="metadata" controls>
+  <source src="./video/elephants-dream-medium.mp4" type="video/mp4" />
+</video>
 ```
 
 #### js
