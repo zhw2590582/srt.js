@@ -8,7 +8,7 @@
 ## Install
 
 ```
-$ npm install --save srt.js
+$ npm install --save @zhw2590582/srt.js
 ```
 
 OR umd builds are also available

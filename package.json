@@ -1,5 +1,5 @@
 {
-  "name": "srt.js",
+  "name": "@zhw2590582/srt.js",
   "version": "1.0.0",
   "description": "Let the html5 video player support .srt format subtitles.",
   "main": "dist/srt.js",
